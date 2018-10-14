@@ -1,11 +1,11 @@
 // 1. захватываем элементы
-var body = document.getElementsByTagName("body");
-body[0].addEventListener("keypress", textColor);
-
-
+var button = document.getElementById("button");
+button.addEventListener("mousemove", escape)
+var x=0; var dx=0;
 // 2. создаем функции
-function textColor(e) {
-    if (e.charCode==114) body[0].style.color = "red";
-    if (e.charCode==103) body[0].style.color = "green";
-    if (e.charCode==98) body[0].style.color = "blue";
-}
+function escape(e) {
+    if (x<=0) dx=50;
+    else if (x>=document.documentElement.clientWidth-250)  dx=-50;
+    x+=dx;
+    button.style.left=x+"px";
+};
