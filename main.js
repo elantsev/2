@@ -1,11 +1,25 @@
 // 1. захватываем элементы
-var button = document.getElementById("button");
-button.addEventListener("mousemove", escape)
-var x=0; var dx=0;
+var body = document.getElementsByTagName("body");
+body[0].onkeydown = textColor;
 // 2. создаем функции
-function escape(e) {
-    if (x<=0) dx=50;
-    else if (x>=document.documentElement.clientWidth-250)  dx=-50;
-    x+=dx;
-    button.style.left=x+"px";
-};
+function textColor(e) {
+    console.log(e);
+    if (e.keyCode==83&e.ctrlKey==true&e.shiftKey==0) {
+        body[0].style.color = "red";
+        message=document.createElement("p");
+        message.innerHTML = "сохранено";
+              document.getElementsByTagName("div")[0].appendChild(message);
+      }
+      else if (e.keyCode==65&e.ctrlKey==true) {
+        body[0].style.color = "red";
+        message=document.createElement("p");
+        message.innerHTML = "выбрано все";
+             document.getElementsByTagName("div")[0].appendChild(message);
+      }
+      else if (e.keyCode==83&e.ctrlKey==true&e.shiftKey==true) {
+        body[0].style.color = "red";
+        message=document.createElement("p");
+        message.innerHTML = "Сохранено все";
+             document.getElementsByTagName("div")[0].appendChild(message);
+      }
+}

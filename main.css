@@ -1,6 +1,6 @@
-button {
+* {
     border: solid Red 1px;
     font-size: 30px;
-    position: absolute;
-    width: 250px;
+   background-color: blue;
+    
 }
