@@ -1,6 +1,13 @@
 * {
-    border: solid Red 1px;
-    font-size: 30px;
-   background-color: blue;
+    /* border: solid rgba(12, 231, 12, 0.603) 1px; */
+    font-size: 15px;
+  
     
+}
+input.invalid {
+    background-color: Pink;
+}
+
+input.valid {
+    background-color: LightGreen;
 }
